@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Studio - Digital Design Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; background: #0f2537; }
+    ::-webkit-scrollbar-thumb { background: #b9f99b; border-radius: 8px; }
+    /* Custom floating cat sticker */
+    .cat-sticker {
+      position: fixed;
+      bottom: 0;
+      right: 2rem;
+      z-index: 50;
+      width: 110px;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+    /* Custom background grid */
+    .bg-grid {
+      background-image: linear-gradient(rgba(185,249,155,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(185,249,155,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+  </style>
+</head>
+<body class="bg-[#f5f6ef] text-[#0f2537] font-serif relative">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-2">
+        <span class="text-3xl text-[#1ed760]"><i class="fa-solid fa-infinity"></i></span>
+        <span class="font-bold text-2xl tracking-tight">Infinity Studio</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="#" class="hover:text-[#b9f99b] transition">Home</a>
+        <a href="#" class="hover:text-[#b9f99b] transition">About</a>
+        <a href="#" class="hover:text-[#b9f99b] transition">Services</a>
+        <a href="#" class="hover:text-[#b9f99b] transition">Contact</a>
+      </nav>
+      <a href="#" class="bg-[#0f2537] text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-[#1ed760] hover:text-[#0f2537] transition">Start a Project</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-[#0f2537] bg-grid text-white pt-20 pb-10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="flex-1">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Transforming Ideas into <br> <span class="text-[#b9f99b]">Digital Excellence</span></h1>
+        <p class="text-xl mb-8">Innovate Your Brand with Creative Excellence. Let's Shape Your Digital Journey.</p>
+        <a href="#" class="bg-[#b9f99b] text-[#0f2537] px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-[#1ed760] transition inline-flex items-center gap-2">
+          Start a Project <i class="fa-solid fa-angles-right"></i>
+        </a>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=facearea&w=400&q=80" alt="Team" class="rounded-3xl shadow-2xl w-[400px] h-[320px] object-cover border-4 border-[#b9f99b]">
+      </div>
+    </div>
+    <!-- Decorative stars -->
+    <span class="absolute left-10 top-10 text-[#b9f99b] text-3xl animate-pulse"><i class="fa-solid fa-star"></i></span>
+    <span class="absolute right-20 top-32 text-[#b9f99b] text-2xl animate-pulse"><i class="fa-solid fa-star"></i></span>
+    <span class="absolute left-1/2 bottom-10 text-[#b9f99b] text-xl animate-pulse"><i class="fa-solid fa-star"></i></span>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="mb-12">
+      <h2 class="text-4xl font-extrabold mb-4">Bring Your Ideas to <span class="text-[#1ed760]">life</span></h2>
+      <p class="text-lg text-gray-700">From startups to established enterprises, we partner with businesses across industries to create exceptional digital experiences.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-b border-gray-300 py-8 text-center">
+      <div>
+        <span class="text-5xl font-extrabold text-[#0f2537]">10</span>
+        <div class="text-gray-600 mt-2">Years of Experience</div>
+      </div>
+      <div>
+        <span class="text-5xl font-extrabold text-[#0f2537]">3k</span>
+        <div class="text-gray-600 mt-2">Project Done</div>
+      </div>
+      <div>
+        <span class="text-5xl font-extrabold text-[#0f2537]">8+</span>
+        <div class="text-gray-600 mt-2">Passionate In-house Experts</div>
+      </div>
+      <div>
+        <span class="text-5xl font-extrabold text-[#0f2537]">2k</span>
+        <div class="text-gray-600 mt-2">Satisfied Clients</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="bg-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-12 text-center">Empowering Your Brand with <span class="text-[#1ed760]">Comprehensive Solutions</span></h2>
+      <div class="space-y-12">
+        <!-- Service 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8 border-b pb-8">
+          <div class="flex items-center justify-center w-24 h-24 rounded-full border-2 border-[#b9f99b] text-3xl font-bold">1</div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-2">Brand Design</h3>
+            <p class="text-gray-700">Craft a unique identity with our creative brand design. Stand out, captivate your audience, and leave a lasting impression.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=200&q=80" alt="Brand Design" class="w-48 h-32 object-cover rounded-xl shadow-lg">
+          <span class="text-3xl text-[#1ed760]"><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+        <!-- Service 2 -->
+        <div class="flex flex-col md:flex-row items-center gap-8 border-b pb-8">
+          <div class="flex items-center justify-center w-24 h-24 rounded-full border-2 border-[#b9f99b] text-3xl font-bold">2</div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+            <p class="text-gray-700">Transform your vision into a stunning, user-friendly website. Experience seamless functionality and cutting-edge design.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=facearea&w=200&q=80" alt="Web Dev" class="w-48 h-32 object-cover rounded-xl shadow-lg">
+          <span class="text-3xl text-[#1ed760]"><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+        <!-- Service 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="flex items-center justify-center w-24 h-24 rounded-full border-2 border-[#b9f99b] text-3xl font-bold">3</div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-2">Digital Marketing</h3>
+            <p class="text-gray-700">Boost your online presence and reach your target audience with data-driven digital marketing strategies.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&q=80" alt="Marketing" class="w-48 h-32 object-cover rounded-xl shadow-lg">
+          <span class="text-3xl text-[#1ed760]"><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-16 bg-[#f5f6ef]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-12 text-center">Our <span class="text-[#1ed760]">Successful Projects</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=500&q=80" alt="Project 1" class="rounded-2xl shadow-xl object-cover w-full h-96">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=500&q=80" alt="Project 2" class="rounded-2xl shadow-xl object-cover w-full h-96">
+      </div>
+      <div class="flex justify-center mt-10">
+        <a href="#" class="bg-[#0f2537] text-white px-8 py-3 rounded-full font-bold text-lg shadow hover:bg-[#1ed760] hover:text-[#0f2537] transition">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="bg-[#f5f6ef] py-16">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl shadow-xl p-10">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-48 h-48 object-cover rounded-2xl shadow-lg border-4 border-[#b9f99b]">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-[#1ed760] text-xl"><i class="fa-solid fa-star"></i></span>
+          <span class="text-[#1ed760] text-xl"><i class="fa-solid fa-star"></i></span>
+          <span class="text-[#1ed760] text-xl"><i class="fa-solid fa-star"></i></span>
+          <span class="text-[#1ed760] text-xl"><i class="fa-solid fa-star"></i></span>
+          <span class="text-[#1ed760] text-xl"><i class="fa-solid fa-star"></i></span>
+          <span class="ml-4 px-3 py-1 border border-gray-400 rounded-full text-gray-700 font-semibold text-sm flex items-center gap-2">
+            <img src="https://assets-global.website-files.com/5f64c7b.../clutch-logo.svg" alt="Clutch" class="w-6 h-6"> Clutch
+          </span>
+        </div>
+        <blockquote class="text-lg italic text-gray-700 mb-4">
+          "Working with Infinity Studio was a transformative experience. Their team not only understood our vision but also brought it to life with creativity and precision. The results exceeded our expectations, and the growth we've seen since partnering with them has been phenomenal. We couldn't have chosen a better agency to work with!"
+        </blockquote>
+        <div class="font-bold text-xl text-[#0f2537]">Alex Mitchell</div>
+        <div class="text-gray-600">CEO of Tech Innovators</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="relative py-16 bg-[#f5f6ef]">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=500&q=80" alt="About" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+      </div>
+      <div class="flex-1 bg-[#b9f99b] rounded-2xl p-10 shadow-lg">
+        <h2 class="text-3xl font-extrabold mb-4">Who We Are</h2>
+        <p class="text-lg mb-4">We are passionate digital pioneers dedicated to transforming your ideas into impactful realities. With a strong foundation in creativity and innovation, we specialize in delivering tailored solutions that empower brands to thrive in the digital age.</p>
+        <p class="text-lg">Our team of seasoned experts brings together a wealth of experience in brand design, web development, digital marketing, and app development. We believe in a client-centric approach, working closely with you to understand your vision and craft strategies that align with your goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Purpose Section -->
+  <section class="py-16 bg-[#f5f6ef]">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h2 class="text-3xl font-extrabold mb-4">Our Purpose and Aspiration</h2>
+        <p class="text-lg mb-4">Driven by creativity and excellence, our mission is to transform ideas into impactful digital experiences. We envision a future where brands connect with their audiences in meaningful ways.</p>
+        <p class="text-lg mb-4">Integrity, innovation, and collaboration are at the heart of everything we do, guiding us as we create value for our clients.</p>
+        <div class="flex gap-10 mt-8">
+          <div>
+            <span class="text-2xl text-[#1ed760]"><i class="fa-solid fa-paper-plane"></i></span>
+            <div class="font-bold">Top 10</div>
+            <div class="text-gray-600 text-sm">Global Companies on Clutch</div>
+          </div>
+          <div>
+            <span class="text-2xl text-[#1ed760]"><i class="fa-solid fa-percent"></i></span>
+            <div class="font-bold">95%</div>
+            <div class="text-gray-600 text-sm">Job Success on Upwork</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=500&q=80" alt="Purpose" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0f2537] text-white pt-16 pb-8 mt-10 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between gap-10 border-b border-gray-700 pb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl text-[#b9f99b]"><i class="fa-solid fa-infinity"></i></span>
+            <span class="font-bold text-2xl">Infinity Studio</span>
+          </div>
+          <div class="flex gap-4 mt-4">
+            <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#b9f99b] text-[#b9f99b] hover:bg-[#b9f99b] hover:text-[#0f2537] transition"><i class="fab fa-behance"></i></a>
+            <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#b9f99b] text-[#b9f99b] hover:bg-[#b9f99b] hover:text-[#0f2537] transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#b9f99b] text-[#b9f99b] hover:bg-[#b9f99b] hover:text-[#0f2537] transition"><i class="fab fa-dribbble"></i></a>
+            <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-[#b9f99b] text-[#b9f99b] hover:bg-[#b9f99b] hover:text-[#0f2537] transition"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-xl mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>Brand Design</li>
+            <li>Web Development</li>
+            <li>Digital Marketing</li>
+            <li>App Development</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-xl mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><span class="text-[#b9f99b]">Home</span></li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-xl mb-4">Contact</h4>
+          <div class="text-gray-300 mb-2">455 West Orchard Street Kings<br>Mountain, NC 280867</div>
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-phone text-[#b9f99b]"></i> +088 (246) 642-27-10</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#b9f99b]"></i> example@gmail.com</div>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 mt-8">
+        Copyright © 2025 Digital Design Agency
+      </div>
+    </div>
+    <!-- Floating cat sticker -->
+    <img src="https://cdn.pixabay.com/photo/2021/12/10/17/38/cat-6861862_1280.png" alt="cat sticker" class="cat-sticker">
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-[#b9f99b] text-[#0f2537] p-3 rounded-full shadow-lg hover:bg-[#1ed760] transition z-50">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script>
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    scrollBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300) scrollBtn.style.display = 'block';
+      else scrollBtn.style.display = 'none';
+    });
+    scrollBtn.style.display = 'none';
+  </script>
+</body>
+</html>
