@@ -74,9 +74,22 @@
                 <a href="#professional" class="hidden md:block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
                     Je cherche un professionnel
                 </a>
-                <button class="md:hidden text-gray-600 focus:outline-none">
+                <button id="mobileMenuBtn" class="md:hidden text-gray-600 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden">
+            <div class="absolute top-0 right-0 w-64 bg-white h-full shadow-lg flex flex-col p-6">
+                <button id="closeMobileMenu" class="self-end mb-6 text-gray-500 text-2xl">&times;</button>
+                <nav class="flex flex-col gap-6">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Qui sommes-nous</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Nos services</a>
+                    <a href="#news" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Actualités</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Contact</a>
+                    <a href="#professional" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300 text-center">Je cherche un professionnel</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -729,11 +742,14 @@
             });
         });
 
-        // Mobile menu toggle functionality would go here
-        // This is a placeholder for actual implementation
-        const mobileMenuButton = document.querySelector('.md\\:hidden');
-        mobileMenuButton.addEventListener('click', function() {
-            alert('Menu mobile en cours de développement. Dans une implémentation réelle, cela afficherait le menu mobile.');
+        // Mobile menu logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); });
+        closeMobileMenu.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        window.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
         });
     </script>
 </body>

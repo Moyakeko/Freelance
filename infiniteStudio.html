@@ -29,6 +29,30 @@
 </head>
 <body class="bg-[#f5f6ef] text-[#0f2537] font-serif relative">
 
+  <!-- Popup Modal -->
+  <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+      <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
+      <h3 class="text-2xl font-bold mb-4 text-[#0f2537]">Start a Project</h3>
+      <form id="projectForm" class="space-y-4">
+        <div>
+          <label class="block mb-1 font-semibold" for="name">Name</label>
+          <input class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1ed760]" type="text" id="name" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="email">Email</label>
+          <input class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1ed760]" type="email" id="email" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="message">Message</label>
+          <textarea class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1ed760]" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[#1ed760] text-[#0f2537] font-bold py-3 rounded-lg hover:bg-[#b9f99b] transition">Send</button>
+        <p id="formMsg" class="text-center text-green-600 font-semibold hidden mt-2">Thank you! We'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
@@ -42,7 +66,7 @@
         <a href="#" class="hover:text-[#b9f99b] transition">Services</a>
         <a href="#" class="hover:text-[#b9f99b] transition">Contact</a>
       </nav>
-      <a href="#" class="bg-[#0f2537] text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-[#1ed760] hover:text-[#0f2537] transition">Start a Project</a>
+      <button id="openModalHeader" class="bg-[#0f2537] text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-[#1ed760] hover:text-[#0f2537] transition">Start a Project</button>
     </div>
   </header>
 
@@ -52,9 +76,9 @@
       <div class="flex-1">
         <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Transforming Ideas into <br> <span class="text-[#b9f99b]">Digital Excellence</span></h1>
         <p class="text-xl mb-8">Innovate Your Brand with Creative Excellence. Let's Shape Your Digital Journey.</p>
-        <a href="#" class="bg-[#b9f99b] text-[#0f2537] px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-[#1ed760] transition inline-flex items-center gap-2">
+        <button id="openModalHero" class="bg-[#b9f99b] text-[#0f2537] px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-[#1ed760] transition inline-flex items-center gap-2">
           Start a Project <i class="fa-solid fa-angles-right"></i>
-        </a>
+        </button>
       </div>
       <div class="flex-1 flex justify-center">
         <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=facearea&w=400&q=80" alt="Team" class="rounded-3xl shadow-2xl w-[400px] h-[320px] object-cover border-4 border-[#b9f99b]">
@@ -257,7 +281,7 @@
     <!-- Floating cat sticker -->
     <img src="https://cdn.pixabay.com/photo/2021/12/10/17/38/cat-6861862_1280.png" alt="cat sticker" class="cat-sticker">
     <!-- Scroll to top button -->
-    <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-[#b9f99b] text-[#0f2537] p-3 rounded-full shadow-lg hover:bg-[#1ed760] transition z-50">
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-[#b9f99b] text-[#0f2537] p-3 rounded-full shadow-lg hover:bg-[#1ed760] transition z-50" title="Scroll to top">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
   </footer>
@@ -271,6 +295,28 @@
       else scrollBtn.style.display = 'none';
     });
     scrollBtn.style.display = 'none';
+
+    // Popup modal logic
+    const modal = document.getElementById('projectModal');
+    const openHeader = document.getElementById('openModalHeader');
+    const openHero = document.getElementById('openModalHero');
+    const closeModal = document.getElementById('closeModal');
+    const form = document.getElementById('projectForm');
+    const formMsg = document.getElementById('formMsg');
+
+    openHeader.addEventListener('click', () => { modal.classList.remove('hidden'); });
+    openHero.addEventListener('click', () => { modal.classList.remove('hidden'); });
+    closeModal.addEventListener('click', () => { modal.classList.add('hidden'); });
+    window.addEventListener('click', (e) => { if(e.target === modal) modal.classList.add('hidden'); });
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formMsg.classList.remove('hidden');
+      setTimeout(() => {
+        formMsg.classList.add('hidden');
+        modal.classList.add('hidden');
+        form.reset();
+      }, 2000);
+    });
   </script>
 </body>
 </html>
