@@ -528,7 +528,7 @@
           <textarea class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" id="message" name="message" rows="5" required></textarea>
         </div>
         <div class="flex items-center justify-between">
-          <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
+        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
           <div id="spinner" class="hidden">
             <i class="fas fa-spinner fa-spin text-blue-600 text-xl"></i>
           </div>
@@ -569,13 +569,13 @@
       // Initialize EmailJS
       emailjs.init("XUzRCqK5MHCf5Wl0L");
       
-      const form = document.getElementById('contactForm');
-      const formMsg = document.getElementById('formMsg');
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
       const formError = document.getElementById('formError');
       const spinner = document.getElementById('spinner');
       
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
         
         // Montrer le spinner de chargement
         spinner.classList.remove('hidden');
@@ -595,14 +595,14 @@
             spinner.classList.add('hidden');
             
             // Afficher le message de succès
-            formMsg.classList.remove('hidden');
+      formMsg.classList.remove('hidden');
             formError.classList.add('hidden');
             
             // Réinitialiser le formulaire
-            form.reset();
+      form.reset();
             
             // Cacher le message après 4 secondes
-            setTimeout(() => formMsg.classList.add('hidden'), 4000);
+      setTimeout(() => formMsg.classList.add('hidden'), 4000);
           }, function(error) {
             // Cacher le spinner
             spinner.classList.add('hidden');
